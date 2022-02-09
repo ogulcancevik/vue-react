@@ -4,7 +4,7 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 const deps = require("./package.json").dependencies;
 module.exports = (_, argv) => ({
   output: {
-    publicPath: argv.mode === 'development' ? "http://localhost:8081/" : 'https://react-bice-three.vercel.app/',
+    publicPath: argv.mode === 'development' ? "http://localhost:8081/" : 'https://vue-react.vercel.app/',
   },
 
   resolve: {
