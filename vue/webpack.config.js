@@ -2,9 +2,9 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 const { VueLoaderPlugin } = require("vue-loader");
 
-module.exports = (_, argv) =>({
+module.exports = {
   output: {
-    publicPath: argv.mode === 'development' ? "http://localhost:8080/" : "https://vue-react.vercel.app/",
+    publicPath: "http://localhost:8080/",
   },
 
   resolve: {
@@ -49,4 +49,4 @@ module.exports = (_, argv) =>({
       template: "./src/index.html",
     }),
   ],
-});
+};
