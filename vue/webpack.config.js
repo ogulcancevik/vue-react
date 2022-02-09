@@ -1,7 +1,6 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 const { VueLoaderPlugin } = require("vue-loader");
-
 module.exports = (_, argv) =>({
   output: {
     publicPath: argv.mode === 'development' ? "http://localhost:8080/" : "https://vue-seven-blue.vercel.app/",
@@ -40,7 +39,7 @@ module.exports = (_, argv) =>({
       name: "vue",
       filename: "remoteEntry.js",
       remotes: {
-        react: "react@http://localhost:8081/remoteEntry.js",
+        react: "react@https://vue-seven-blue.vercel.app/remoteEntry.js",
       },
       exposes: {},
       shared: require("./package.json").dependencies,
