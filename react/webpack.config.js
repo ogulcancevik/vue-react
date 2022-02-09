@@ -2,9 +2,9 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 
 const deps = require("./package.json").dependencies;
-module.exports = (_, argv) => ({
+module.exports = {
   output: {
-    publicPath: argv.mode === 'development' ? "http://localhost:8081/" : 'https://react-bice-three.vercel.app/',
+    publicPath: "https://react-bice-three.vercel.app/",
   },
 
   resolve: {
@@ -59,12 +59,12 @@ module.exports = (_, argv) => ({
         },
         "regenerator-runtime": {
           singleton: true,
-        }
+        },
       },
     }),
-    
+
     new HtmlWebPackPlugin({
       template: "./src/index.html",
     }),
   ],
-});
+};
