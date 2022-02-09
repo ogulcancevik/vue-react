@@ -1,7 +1,6 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 const { VueLoaderPlugin } = require("vue-loader");
-let url = argv.mode === 'development' ? "http://localhost:8080/" : "https://vue-seven-blue.vercel.app/"
 module.exports = (_, argv) =>({
   output: {
     publicPath: argv.mode === 'development' ? "http://localhost:8080/" : "https://vue-seven-blue.vercel.app/",
