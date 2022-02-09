@@ -4,7 +4,7 @@ const { VueLoaderPlugin } = require("vue-loader");
 
 module.exports = (_, argv) =>({
   output: {
-    publicPath: argv.mode === 'development' ? "http://localhost:8080/" : "https://vue-react.vercel.app/",
+    publicPath: argv.mode === 'development' ? "http://localhost:8080/" : "https://vue-glibgaxpy-ogulcancevik.vercel.app/",
   },
 
   resolve: {
